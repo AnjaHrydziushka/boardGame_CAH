@@ -4,7 +4,8 @@ import cards from "../data/cards.json";
 import { useState, useEffect } from "react";
 import { userNames } from "../data/userNames";
 import { shuffleCards } from "../utils/utils";
-import "./Board.css";
+import "../styles/Board.css";
+import backgroundImg from "../assets/backgroundImg.jpg";
 
 export default function Board() {
   const [blackCard, setBlackCard] = useState({});
@@ -81,7 +82,7 @@ export default function Board() {
   });
 
   return (
-    <div className="board">
+    <div className="board" style={{ backgroundImage: `url(${backgroundImg})` }}>
       <div className="content">
         <div className="users">
           <Users data={users} />

@@ -1,9 +1,9 @@
 import Board from "./components/Board";
 import { useState } from "react";
-import "./App.css";
+import "./styles/App.css";
 import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
-import backgroundPic from "../src/assets/backgroundPic.jpg";
+import backgroundImg from "../src/assets/backgroundImg.jpg";
 
 function App() {
   const [game, setGame] = useState(false);
@@ -12,7 +12,7 @@ function App() {
     return (
       <div
         className="center-container"
-        style={{ backgroundImage: `url(${backgroundPic})` }}
+        style={{ backgroundImage: `url(${backgroundImg})` }}
       >
         <Button variant="danger" size="lg" onClick={() => setGame(true)}>
           Start Game

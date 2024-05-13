@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { shuffleCards } from "../utils/utils";
-import "./GamePlay.css";
+import "../styles/GamePlay.css";
 import Button from "react-bootstrap/Button";
 
 export default function GamePlay({
@@ -27,6 +27,7 @@ export default function GamePlay({
     updateScore(winner.user);
     setPlayWhiteCards(false);
     setPlayBlackCard(false);
+    chooseBlackCard();
   };
 
   useEffect(() => {
@@ -36,7 +37,7 @@ export default function GamePlay({
   return (
     <div className="gameplay-container">
       <div className="black-card-container">
-        <Button variant="outline-secondary" onClick={() => chooseBlackCard()}>
+        <Button variant="dark" onClick={() => chooseBlackCard()}>
           Choose a black card
         </Button>
         {playBlackCard ? (
@@ -47,10 +48,7 @@ export default function GamePlay({
       </div>
       <div className="white-cards-container">
         {playBlackCard ? (
-          <Button
-            variant="outline-info"
-            onClick={() => setPlayWhiteCards(true)}
-          >
+          <Button variant="light" onClick={() => setPlayWhiteCards(true)}>
             Reveal cards
           </Button>
         ) : null}

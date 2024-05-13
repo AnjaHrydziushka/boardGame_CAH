@@ -8,8 +8,10 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f0f0f0;
   height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .content {
@@ -20,7 +22,6 @@ html {
 
 .users {
   width: 20%;
-  background-color: #dddddd;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -28,7 +29,6 @@ html {
 
 .gameplay {
   width: 80%;
-  background-color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
