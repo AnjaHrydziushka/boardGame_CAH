@@ -4,6 +4,7 @@ import cards from "../data/cards.json";
 import { useState, useEffect } from "react";
 import { userNames } from "../data/userNames";
 import { shuffleCards } from "../utils/utils";
+import "./Board.css";
 
 export default function Board() {
   const [blackCard, setBlackCard] = useState({});
@@ -80,16 +81,21 @@ export default function Board() {
   });
 
   return (
-    <div>
-      <h1>Welcome to the game!</h1>
-      <Users data={users} />
-      <GamePlay
-        cardsForRound={whiteCardsForRound}
-        selectedBlackCard={blackCard}
-        updateScore={updateScore}
-        round={roundCount}
-        winner={theWinner}
-      />
+    <div className="board">
+      <div className="content">
+        <div className="users">
+          <Users data={users} />
+        </div>
+        <div className="gameplay">
+          <GamePlay
+            cardsForRound={whiteCardsForRound}
+            selectedBlackCard={blackCard}
+            updateScore={updateScore}
+            round={roundCount}
+            winner={theWinner}
+          />
+        </div>
+      </div>
     </div>
   );
 }

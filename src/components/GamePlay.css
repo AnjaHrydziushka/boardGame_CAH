@@ -1,0 +1,74 @@
+.gameplay-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.black-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.black-card-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 25px;
+  border: 2px solid black;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 100%;
+  max-width: 100%;
+  background-color: black;
+  color: white;
+  height: 200px;
+  box-sizing: border-box;
+}
+
+.white-cards-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.reveal-button {
+  margin-bottom: 20px;
+}
+
+.white-cards-row {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.user-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+  flex: 1;
+  box-sizing: border-box;
+}
+
+.white-card {
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 25px;
+  padding: 10px;
+  margin: 5px 0;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  max-width: 100%;
+  height: 150px;
+  box-sizing: border-box;
+}

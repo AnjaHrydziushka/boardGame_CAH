@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { shuffleCards } from "../utils/utils";
+import "./GamePlay.css";
+import Button from "react-bootstrap/Button";
 
 export default function GamePlay({
   cardsForRound,
@@ -32,37 +34,45 @@ export default function GamePlay({
   }, [selectedBlackCard]);
 
   return (
-    <div>
-      <button onClick={() => chooseBlackCard()}>Choose a black card</button>
-      {playBlackCard ? (
-        <div>
-          <div>
-            <h2>Black Card: {blackCard.text}</h2>
+    <div className="gameplay-container">
+      <div className="black-card-container">
+        <Button variant="outline-secondary" onClick={() => chooseBlackCard()}>
+          Choose a black card
+        </Button>
+        {playBlackCard ? (
+          <div className="black-card-text">
+            <h2>{blackCard.text}</h2>
           </div>
-          <button onClick={() => setPlayWhiteCards(true)}>Reveal cards</button>
-        </div>
-      ) : (
-        <></>
-      )}
+        ) : null}
+      </div>
+      <div className="white-cards-container">
+        {playBlackCard ? (
+          <Button
+            variant="outline-info"
+            onClick={() => setPlayWhiteCards(true)}
+          >
+            Reveal cards
+          </Button>
+        ) : null}
 
-      {playWhiteCards ? (
-        <div>
-          <h3>Answers:</h3>
-          <div>
+        {playWhiteCards ? (
+          <div className="white-cards-row">
             {shuffleCards([...cardsForRound]).map((user, index) => (
-              <div key={index}>
-                <ul onClick={() => completeGameRound(user)}>
-                  {user.whiteCards.map((card, i) => (
-                    <li key={i}>{card}</li>
-                  ))}
-                </ul>
+              <div
+                key={index}
+                className="user-cards"
+                onClick={() => completeGameRound(user)}
+              >
+                {user.whiteCards.map((card, i) => (
+                  <div className="white-card" key={i}>
+                    {card}
+                  </div>
+                ))}
               </div>
             ))}
           </div>
-        </div>
-      ) : (
-        <></>
-      )}
+        ) : null}
+      </div>
     </div>
   );
 }
