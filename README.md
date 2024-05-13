@@ -2,7 +2,7 @@
 
 **Deployed version:** https://game-cah.netlify.app/
 
-[]([https://github.com/Your_Repository_Name/Your_GIF_Name.gif](https://github.com/AnjaHrydziushka/boardGame_CAH/blob/main/src/assets/cah.gif))
+[]([https://github.com/Your_Repository_Name/Your_GIF_Name.gif](https://github.com/AnjaHrydziushka/boardGame_CAH/blob/main/src/assets/cah.gif)
 
 This is a work-in-progress version. I'll still need to improve the logic and styling and add some additional functionality.
 
